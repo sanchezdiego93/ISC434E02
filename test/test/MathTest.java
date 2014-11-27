@@ -5,7 +5,6 @@
  */
 package test;
 
-import java.util.ArrayList;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Assert;
@@ -18,16 +17,26 @@ import static org.junit.Assert.*;
  *
  * @author Diego
  */
-public class StringUtilityTest {
+public class MathTest {
     
-    StringUtility string = new StringUtility();
+    Math m = new Math();
     
-    public void concatTest(){
-        ArrayList<String> bag = new ArrayList<>();
-        bag.add("1");
-        String sep = "ojo";
-        Assert.assertEquals("1ojo~ojo", string.concat(bag, sep));
-
+    @Test
+    public void perimeterTest1() {
+        int n = 4;
+        Assert.assertEquals(n * 4, m.perimeterOfSquare(n));
+    }
+    
+    @Test
+    public void TwoSumsTest1() {
+        int n = 4;
+        Assert.assertEquals(n * 4, m.perimeterOfSquare(n));
+    }
+    
+    @Test
+    public void EvenDivideTest1() {
+        int n = 4;
+        Assert.assertEquals(true, m.evenDivide(n));
     }
 
     // TODO add test methods here.
